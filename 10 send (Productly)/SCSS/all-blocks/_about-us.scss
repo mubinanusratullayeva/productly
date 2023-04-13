@@ -1,0 +1,61 @@
+@use'../mixins';
+@use'../variables';
+
+.aboutUs{
+    padding-top: 48px;
+    padding-bottom: 96px;
+    &__title{
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 46px;
+        color: variables.$title-color;
+    }
+    &__desc{
+        margin: 14px 0 45px 0;
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    &__cards{
+        @include mixins.flexBox(center, space-between);
+        &-item{
+            position: relative;
+            padding: 36px 0 34px 35px;
+            min-width: 345px;
+            background-color: variables.$main-color;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: 0.5s;
+            cursor: pointer;
+            .info{
+                &__title{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: variables.$title-color;
+                }
+                &__occupation{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 26px;
+                    display: block;
+                }
+                &__link{
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: #1943EF;
+                }
+            }
+            &--img{
+                position: absolute;
+                right: -61px;
+                top: 12px;
+            }
+        }
+    }
+}

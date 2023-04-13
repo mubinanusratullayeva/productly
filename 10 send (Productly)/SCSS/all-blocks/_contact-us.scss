@@ -1,0 +1,74 @@
+@use'../mixins';
+@use'../variables';
+
+.contactUs{
+    padding: 5px 0;
+    background-color: #FFEEE1;
+    &__flexbox{
+        padding: 62px 0 90px 0;
+        @include mixins.flexBox(center, space-between);
+        .deco{
+            ::placeholder{
+                font-family: 'Open Sans';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: #C6C6C6;
+            }
+            &__title{
+                font-weight: 700;
+                font-size: 34px;
+                line-height: 46px;
+                color: variables.$title-color;
+            }
+            &__desc{
+                margin: 17px 0 12px 0;
+                max-width: 528px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            &__tel, &__mail{
+                display: flex;
+                align-items: center;
+                column-gap: 11px;
+                margin-top: 22px;
+                font-family: 'Open Sans';
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 26px;
+                color: variables.$text-color;
+            }
+            &__tel span, &__mail span{
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background-color: variables.$main-color;
+                @include mixins.flexBox(center, center);
+            }
+        }
+        .regista{
+            input{
+                padding: 10px 20px;
+                min-width: 280.29px;
+                background-color: variables.$main-color;
+                border-radius: 5px;
+                border: none;
+            }
+            textarea{
+                display: block;
+                margin-top: 18px;
+                margin-bottom: 20px;
+                min-width: 577px;
+                min-height: 159px;
+                padding: 9px 0 0 21px;
+                background-color: variables.$main-color;
+                border-radius: 5px;
+                border: none;
+            }
+            &__btn{
+                @include mixins.btn(117px, variables.$style-color, 15px 30px, none, variables.$main-color);
+            }
+        }
+    }
+}

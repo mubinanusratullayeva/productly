@@ -1,0 +1,79 @@
+@use'../mixins';
+@use'../variables';
+
+.marketingPart{
+    padding-bottom: 48px;
+    .strategies{
+        &__title{
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 46px;
+            color: variables.$title-color;
+        }
+        &__desc{
+            margin: 14px 0 24px 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &__btns{
+            &-item{
+                text-transform: capitalize;
+                min-width: 47px;
+                background-color: variables.$main-color;
+                border: 1px solid #D7D7D7;
+                border-radius: 90px;
+                padding: 6px 14px;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            &-item:hover{
+                background-color: variables.$style-color;
+                color: variables.$main-color;
+            }
+        }
+        &__decoration{
+            padding: 24px 34px 26px 33px;
+        }
+        &__blocks{
+            margin-top: 31px;
+            @include mixins.flexBox(center, space-between);
+            flex-wrap: wrap;
+            row-gap: 30px;
+            &-item{
+                transition: 0.3s;
+                min-width: 377px;
+                background: variables.$main-color;
+                border-radius: 8px;
+                filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
+                cursor: pointer;
+                &--title{
+                transition: 0.2s;
+                max-width: 308px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 34px;
+                color: variables.$title-color;
+                }
+                &--btn{
+                    margin-top: 29px;
+                    padding: 0 14px;
+                    max-width: 70px;
+                    background: #F5F5F5;
+                    text-transform: capitalize;
+                    border-radius: 90px;
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 28px;
+                    color: variables.$text-color;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+            &-item:hover .strategies__blocks-item--title{
+                color: variables.$style-color;
+            }
+        }
+    }
+}

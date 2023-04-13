@@ -1,0 +1,140 @@
+@use'../mixins';
+@use'../variables';
+
+.cardsPart{
+    padding-bottom: 15px;
+    padding-top: 56px;
+    background-image: url(../images/Bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+        background-image: url(../images/Bg@2x.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
+    }
+    .superpowers{
+        padding-bottom: 90px;
+        &__title{
+            margin: 0 auto;
+        max-width: 462px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 46px;
+        text-align: center;
+        color: variables.$title-color;
+        }
+        &__cards{
+            margin-top: 70px;
+            margin-bottom: 34px;
+            @include mixins.flexBox(center, space-between);
+            &-item{
+                &--icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 50px;
+                min-height: 50px;
+                background: #7752BE;
+                border-radius: 19px;
+                }
+                &--title{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: variables.$title-color;
+                    margin: 30px 0 16px 0;
+                }
+                &--desc{
+                    max-width: 262px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            } 
+              &-items{
+                &--icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 50px;
+                min-height: 50px;
+                background: variables.$style-color;
+                border-radius: 19px;
+                }
+                &--title{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: variables.$title-color;
+                    margin: 30px 0 16px 0;
+                }
+                &--desc{
+                    max-width: 262px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+            &-itemt{
+                &--icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 50px;
+                min-height: 50px;
+                background: #F03E3D;
+                border-radius: 19px;
+                }
+                &--title{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: variables.$title-color;
+                    margin: 30px 0 16px 0;
+                }
+                &--desc{
+                    max-width: 262px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+            &-itemf{
+                &--icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 50px;
+                min-height: 50px;
+                background:  #4DADF7;
+                border-radius: 19px;
+                }
+                &--title{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: variables.$title-color;
+                    margin: 30px 0 16px 0;
+                }
+                &--desc{
+                    max-width: 262px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+        &__btn{
+            margin: 0 auto;
+            display: block;
+            @include mixins.btn(171px, #FF7549, 15px 35px, none, variables.$main-color);
+        }
+    }
+}

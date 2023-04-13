@@ -1,0 +1,35 @@
+@use'../mixins';
+@use'../variables';
+
+footer{
+    padding-top: 54px;
+    .links{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__menu{
+            list-style: none;
+            &-heading{
+                padding-bottom: 15px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
+                color: variables.$title-color;
+            }
+            &-link{
+                text-decoration: none;
+                padding-right: 137px;
+                padding-bottom: 10px;
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 35px;
+                color: variables.$text-color;
+
+            }
+            &-link:hover{
+                color: variables.$style-color;
+            }
+        }
+    }
+}

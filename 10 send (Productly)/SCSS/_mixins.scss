@@ -1,0 +1,32 @@
+@use'./variables';
+
+@mixin btn($width, $bg-color, $pad, $border, $color){
+    background-color: $bg-color;
+    max-width: $width;
+    border-radius: 4px;
+    padding: $pad;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color;
+    cursor: pointer;
+    border: $border;
+}
+
+@mixin flexBox ($align, $justfy){
+    display: flex;
+    align-items: center;
+
+    @if $align{
+        align-items: $align;
+    }@else{
+        align-items: flex-start;
+    }
+
+    @if $justfy{
+        justify-content: $justfy;
+    }@else{
+        justify-content: flex-start;
+    }
+}

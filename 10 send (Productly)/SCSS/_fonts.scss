@@ -1,0 +1,25 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v34-latin-regular.eot');
+    src: url('../fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+         url('../fonts/open-sans-v34-latin-regular.woff') format('woff'),
+         url('../fonts/open-sans-v34-latin-regular.ttf') format('truetype'),
+         url('../fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.eot');
+    src: url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+         url('../fonts/poppins-v20-latin-regular.woff') format('woff'),
+         url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'),
+         url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg');
+  }
